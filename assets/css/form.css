@@ -1,0 +1,172 @@
+/* Formulário isolado — prefixo 'sentra-' */
+
+.sentra-container {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    max-width: 1000px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 40px auto;
+    animation: sentra-slideUp 0.6s ease-out;
+  
+}
+
+@keyframes sentra-slideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.sentra-info-section {
+      background-color: #06273A;
+    color: white;
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sentra-info-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #ffd700;
+}
+
+.sentra-info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 15px;
+}
+
+.sentra-info-item svg {
+    width: 24px;
+    height: 24px;
+    fill: #ffd700;
+}
+
+.sentra-form-section {
+    padding: 50px 40px;
+}
+
+.sentra-form-section h2 {
+    color: #06273A;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.sentra-subtitle {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 1em;
+}
+
+.sentra-form-group {
+    margin-bottom: 25px;
+}
+
+.sentra-form-group label {
+    display: block;
+    color: #0a3d52;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.sentra-form-group input,
+.sentra-form-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+.sentra-form-group input:focus,
+.sentra-form-group textarea:focus {
+    outline: none;
+    border-color: #ffd700;
+    box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.1);
+}
+
+.sentra-btn {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(135deg, #c8a13f 0%, #ffd700 100%);
+    color: #0a3d52;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.sentra-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(255, 215, 0, 0.3);
+}
+
+/* === POPUP === */
+.sentra-popup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.sentra-popup.active {
+    display: flex;
+    animation: sentra-fadeIn 0.3s ease-out;
+}
+
+.sentra-popup-content {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+    animation: sentra-scaleIn 0.3s ease-out;
+}
+
+.sentra-success-icon {
+    width: 80px;
+    height: 80px;
+    background: #4CAF50;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.sentra-success-icon svg {
+    width: 40px;
+    height: 40px;
+    fill: white;
+}
+
+@keyframes sentra-fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes sentra-scaleIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+@media (max-width: 768px) {
+    .sentra-container {
+        grid-template-columns: 1fr;
+    }
+}

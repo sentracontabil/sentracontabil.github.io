@@ -1,0 +1,9 @@
+@media screen and (max-width: 900px) {
+  .bemvindo {
+    display: none !important;
+  }
+
+  .titulodapagina {
+    margin-top: 105px;
+  }
+}

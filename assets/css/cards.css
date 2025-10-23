@@ -1,0 +1,100 @@
+/* Container isolado */
+.cntb-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background: transparent;
+  text-align: center;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Título */
+.cntb-title {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  font-weight: 600;
+  color: #06273A;
+}
+
+/* Grid responsivo */
+.cntb-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* Card */
+.cntb-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 30px 20px;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 350px;
+}
+
+.cntb-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+/* Cabeçalho */
+.cntb-head {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.cntb-num {
+  font-size: 0.9rem;
+  color: #999;
+  font-weight: 500;
+}
+
+/* Ícone */
+.cntb-icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+/* Título do card */
+.cntb-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #06273A;
+}
+
+/* Texto */
+.cntb-text {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+/* Botão */
+.cntb-btn {
+  display: inline-block;
+  background-color: #06273A;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.cntb-btn:hover {
+  background-color: #0a3a57;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .cntb-title {
+    font-size: 1.6rem;
+  }
+  .cntb-card {
+    padding: 25px 15px;
+  }
+}
